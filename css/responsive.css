@@ -1,0 +1,255 @@
+:root {
+    --color-1: #262632;
+    --color-2:#39394c;
+    --accent-color1: #f44336;
+    --text-color1: #fff;
+    --transparent-1:#26263280;
+    --transparent-2: rgb(57, 57, 76, 0.5);
+    --transparent-3: rgb(255, 255, 255, 0.2);
+}
+
+/* tablet */
+@media(max-width:768px) {
+    .hero img{
+        width: 50vw;
+}
+/* nav */
+#menu-icon{
+    display: block;
+}
+.navbar{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    background: var(--transparent-1);
+    padding: 1rem 3rem;
+    border-left: 1px solid var(--transparent-3);
+    border-bottom: 1px solid var(--transparent-3);
+    display: none;
+}
+.navbar a{
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: var(--text-color1);
+}
+.navbar.active{
+    display: block;
+}
+/* home */
+.home{
+    flex-direction: column-reverse;
+    gap: 2rem;
+}
+.home-content{
+    align-items: center;
+    text-align: center;
+}
+.sosmed-icons a{
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    padding: 1rem;
+}
+.button{
+    font-size: 3rem;
+}
+/* abt */
+.about{
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 5rem;
+}
+.about h1{
+    text-align: center;
+}
+/* edu */
+.education{
+    flex-direction: column-reverse;
+    gap: 2rem;
+}
+.education h1{
+    text-align: center;
+}
+.education-content{
+    font-size: 3rem;
+    align-items: center;
+    text-align: center;
+}
+/* skl */
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    place-items: center;
+    padding-block: 1rem;
+    gap: 4rem;
+}
+.skills-container i{
+    font-size: 10rem;
+}
+.skills-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-color1);
+    height: 250px;
+    width: 250px;
+    cursor:pointer;
+    border: 5px solid transparent;
+    transition:all .2s ;
+}
+/* foot */
+.footer-icons a{
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    padding: 1rem;
+    margin: 2rem 1rem;
+}
+}
+/* akhir tablet */
+
+/* mobile */
+@media(max-width:431px){
+.hero img{
+width: 60vw;
+}
+/* home */
+.home{
+    flex-direction: column-reverse;
+    gap: 2rem;
+}
+.home-content h1{
+    font-size: 4rem;
+}
+.home h3{
+    font-size: 3rem;
+}
+/* abt */
+.about-content .heading{
+    font-size: 4rem;
+}
+.about-content{
+    font-size: 2rem;
+}
+/* edu */
+.education-content .heading{
+    font-size: 4rem;
+}
+.education{
+    gap: 2rem;
+}
+.education-content{
+    font-size: 2rem;
+}
+/* skl */
+.skills-container{
+    display: grid;
+    justify-content: center;
+    padding-block: 1rem;
+    font-size: 2rem;
+}
+.skills-container i{
+    font-size: 8rem;
+}
+.skills-box{
+    height: 200px;
+    width: 200px;
+}
+/* cont */
+.contact form{
+    flex-direction: column;
+}
+.contact-content{
+margin: 5rem 0;
+}
+/* foot */
+.footer-icons a{
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    padding: 1rem;
+    margin: 2rem 1rem;
+}
+}
+/* akhir mobile */
+
+/* mobile S */
+@media(max-width:376px){
+.hero img{
+    width: 60vw;
+}
+/* home */
+.home{
+    flex-direction: column-reverse;
+    gap: 2rem;
+}
+.home-content h1{
+    font-size: 3rem;
+}
+.home h3{
+    font-size: 2rem;
+}
+.sosmed-icons a{
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    padding: 1rem;
+}
+.button{
+    font-size: 2rem;
+}
+/* abt */
+.about-content .heading{
+    font-size: 3rem;
+}
+.about-content{
+    font-size: 1.5rem;
+}
+/* edu */
+.education{
+    gap: 2rem;
+}
+.education-content .heading{
+    font-size: 3rem;
+}
+.education-content{
+    font-size: 1.5rem;
+}
+/* skl */
+.skills-content .heading{
+    font-size: 4rem;
+}
+.skills-container{
+    display: grid;
+    justify-content: center;
+    font-size: 1.5rem;
+    gap: 2rem;
+}
+.skills-container i{
+    font-size: 6rem;
+}
+.skills-box{
+    height: 150px;
+    width: 150px;
+}
+/* cont */
+.contact form{
+    flex-direction: column;
+}
+.contact-content .heading{
+    font-size: 4rem;
+}
+.contact-content{
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+/* foot */
+.footer-icons a{
+    font-size: 3rem;
+    padding: 1rem;
+    margin: 2rem 1rem;
+}
+}

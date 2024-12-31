@@ -1,18 +1,16 @@
 *{
     margin: 0;
-    pad: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
     font-family: 'ubuntu', sans-serif;
 }
 :root {
     --color-1: #262632;
     --color-2:#39394c;
     --accent-color1: #f44336;
-    --accent-color2: #c1352b;
     --text-color1: #fff;
-    --text-color2:#000;
     --transparent-1:#26263280;
     --transparent-2: rgb(57, 57, 76, 0.5);
     --transparent-3: rgb(255, 255, 255, 0.2);
@@ -29,17 +27,20 @@ body{
 div h1.heading{
     font-size: 5rem;
 }
+
 /* scrollbar */
 ::-webkit-scrollbar{
     width: 10px;
 }
 ::-webkit-scrollbar-thumb{
     background-color: var(--accent-color1);
+    border-radius: 5rem;
 }
 ::-webkit-scrollbar-track{
     background-color: var(--transparent-2);
 }
 /* akhir scrollbar */
+
 /* header */
 .header{
     position: fixed;
@@ -53,13 +54,13 @@ div h1.heading{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 10;
 }
 #menu-icon{
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: var(--accent-color1);
     display: none;
-}
+} 
 .logo{
     font-size: 3rem;
     color: var(--text-color1);
@@ -74,37 +75,42 @@ div h1.heading{
     text-shadow: 0 0 20px var(--text-color1);
     transition: all .2s;
 }
-span{
-    background: var(--accent-color1);
-    background-clip: text;
-    color: transparent;
-    text-transform: uppercase;
-    font-weight: 800;
-}
+/* navbar */
 .navbar a{
     font-size: 2rem;
     color: var(--text-color1);
     margin-left: 3rem;
     font-weight: 600;
-    transition: all .2s;
     border-bottom: 3px solid transparent;
+    transition: all .2s;
 }
 .navbar a:hover{
     color: var(--accent-color1);
     text-shadow: 0 0 10px var(--accent-color1);
     border-bottom: 3px solid var(--accent-color1);
+    transition: all.2s;
 }
 .navbar a:active{
-    color: var(--accent-color1);
+    color: var(--text-color1);
     text-shadow: 0 0 20px var(--text-color1);
-    border-bottom: 3px solid var(--accent-color1);
+    border-bottom: 3px solid var(--text-color1);
     transition: all .2s;
 }
+/* akhir navbar */
 /* akhir header */
+
 /* content */
+span{
+    background: var(--accent-color1);
+    background-clip: text;
+    color: var(--accent-color1);
+    text-transform: uppercase;
+    font-weight: 800;
+}
 /* home */
 section{
     min-height: 100vh;
+    width: 100%;
     padding: 10rem 10%;;
 }
 .home{
@@ -135,18 +141,19 @@ section{
 .hero img{
     width: 30vw;
     border-radius: 50%;
-    transition: all .2s;
+    transition: all 0.5s;
 }
 .hero img:hover{
     border-radius: 50%;
     box-shadow: 0 0 30px var(--accent-color1) ;
-    transition: all .2s;
+    transform: scale(1.05);
+    transition: all 0.5s;
 }
 .sosmed-icons a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 1rem;
     background-color: transparent;
     border: 2px solid var(--accent-color1);
@@ -181,23 +188,24 @@ section{
     transition: all .2s;
 }
 .button:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 0 10px var(--accent-color1);
     transition: all .2s;
 }
 .button:active{
-    transform: scale(0.99);
+    transform: scale(0.95);
     box-shadow: 0 0 10px var(--accent-color1);
     transition: all .2s;
 }
 /* akhir home */
+
 /* about */
 .about{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10rem;
-    background-color: var(--color-2);
+    background-image: linear-gradient(var(--color-1),var(--color-2), var(--color-1));
 }
 .about-content h1{
     color: var(--text-color1);
@@ -206,6 +214,7 @@ section{
     line-height: 2;
 }
 /* akhir about */
+
 /* education */
 .education{
     display: flex;
@@ -217,6 +226,7 @@ section{
     color: var(--text-color1);
     font-weight: 800;
     text-align: left;
+    line-height: 2;
 }
 .education-content h3{
     color: var(--accent-color1);
@@ -226,10 +236,11 @@ section{
     margin-bottom: 2rem;
 }
 /* akhir education */
+
 /* skills */
 .skills{
     text-align: center;
-    background-color: var(--color-2);
+    background-image: linear-gradient(var(--color-1),var(--color-2), var(--color-1));
     color: var(--text-color1);
     margin: 5rem 0;
 }
@@ -240,9 +251,10 @@ section{
 }
 .skills-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-    align-items: center;
-    gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    place-items: center;
+    padding-block: 2rem;
+    gap: 6rem;
 }
 .skills-container i{
     font-size: 10rem;
@@ -252,11 +264,12 @@ section{
     justify-content: center;
     align-items: center;
     background-color: var(--accent-color1);
-    height: 300px;
-    border-radius: 3rem;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
     cursor:pointer;
     border: 5px solid transparent;
-    transition:all .2s ;
+    transition:all 0.5s ;
 }
 .skills-box:hover{
     background: var(--text-color1);
@@ -265,10 +278,10 @@ section{
     transform: scale(1.05);
 }
 /* akhir skills */
+
 /* contact */
 .contact{
     background-color: var(--color-1);
-    margin: 6rem 0;
     text-align: center;
 }
 .contact h1{
@@ -300,6 +313,8 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0; 
 }
 /* akhir contact */
+/* akhir content */
+
 /* footer */
 .footer{
     background-color: var(--color-2);
@@ -307,20 +322,46 @@ input[type=number]::-webkit-outer-spin-button {
     align-items: center;
     padding: 0 0 20px 0;
 }
-.footer .sosmed-icons{
+.footer .footer-icons{
     text-align: center;
-    margin-left: 5rem;
+}
+.footer-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: transparent;
+    border: 2px solid var(--accent-color1);
+    border-radius:50% ;
+    color: var(--accent-color1);
+    margin: 2rem 1rem;
+    transition:all .2s;
+}
+.footer-icons a:hover{
+    color: var(--text-color1);
+    background-color: var(--accent-color1);
+    box-shadow: 0 0 10px var(--accent-color1);
+    transform: scale(1.1) translateY(-5px);
+}
+.footer-icons a:active{
+    color: var(--text-color1);
+    background-color: var(--accent-color1);
+    box-shadow: 0 0 10px var(--accent-color1);
+    transform: scale(0.95) translateY(-5px);
+    transition: all .2s;
 }
 .footer ul{
     text-align: center;
     font-size: 2rem;
 }
 .footer ul li{
+    text-align: center;
     display: inline-block;
-    margin-left: 20px;
     margin-bottom: 10px;
 }
 .footer ul li a{
+    text-align: center;
     color: var(--text-color1);
     transition: all .2s;
 }
@@ -329,9 +370,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .footer .copyright{
     text-align: center;
-    margin-top: 0px;
     font-size: 15px;
-    line-height: 4rem;
 }
 /* akhir footer */
-/* end content */
